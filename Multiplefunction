@@ -1,0 +1,15 @@
+#include<iostream>
+using namespace std;
+void usa(){ //first function
+ cout<<"You are in USA"<<endl;
+ return; //funtion ko break kr dega
+}
+void India(){  //second function
+    cout<<"You are in india:"<<endl;
+    usa();
+}
+int main(){
+   cout<<"You are in main:"<<endl;
+   India();
+   return 0;
+}
