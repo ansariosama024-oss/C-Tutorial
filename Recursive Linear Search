@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int linearSearch(int arr[], int n, int key) {
+    // Base case
+    if (n == 0)
+        return -1;
+
+    // If last element matches
+    if (arr[n - 1] == key)
+        return n - 1;
+
+    // Recursive call for remaining array
+    return linearSearch(arr, n - 1, key);
+}
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 10};
+    int n = 5;
+    int key = 8;
+
+    int result = linearSearch(arr, n, key);
+
+    if (result != -1)
+        cout << "Element found at index: " << result;
+    else
+        cout << "Element not found";
+
+    return 0;
+}
